@@ -31,6 +31,7 @@ UDX710系列之5G手机壳开源Web正式登场
 | **📡 WiFi管理** | SSID/密码设置、客户端管理、信道选择 | 移动热点、共享网络 |
 | **💬 短信中心** | 收发短信、远程控制、套餐查询 | 运营商业务管理 |
 | **⚙️ 高级功能** | AT指令终端、Web Shell、LED控制 | 开发者调试、高级玩家 |
+<img width="903" height="1281" alt="`03~GNU9G0 9C0FV}}D4%97" src="https://github.com/user-attachments/assets/cb6c1902-f727-4b3b-beae-49423100ddf6" /><img width="921" height="1347" alt="(4NVI1_EP$L0BM29PS 1J}7" src="https://github.com/user-attachments/assets/1233f4b1-b61c-4ed2-8c0d-f5ab8c933100" />
 
 ## 🛠️ 快速开始
 
