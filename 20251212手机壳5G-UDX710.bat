@@ -87,7 +87,7 @@ adb shell "chmod 755 /home/root/44944/vnstat"
 adb shell "chmod 755 /home/root/44944/vnstatd"
 adb shell "chmod 755 /home/root/44944/vnstatd.conf"
 adb shell "chmod 755 /home/root/44944/dist/index.html"
-:: adb shell "find /home/root/44944/assets -type f -exec chmod 644 {} \; 2>/dev/null || true"
+:: adb shell "find /home/root/44944/assets -type f -exec chmod 755 {} \; 2>/dev/null || true"
 echo [成功] 权限设置完成
 exit /b 0
 
@@ -120,12 +120,14 @@ adb push .\44944 /home/root/ || (
 :: call :VERIFY_PUSH
 
 :: 4. 修改hostname.sh启动脚本（更安全的方式）备份，查找启动，添加
-echo [步骤3] 修改启动脚本kk.sh
+echo [步骤3] 修改启动脚本hostname.sh
 adb shell "cp /etc/init.d/hostname.sh /etc/init.d/hostname.sh.bak 2>/dev/null || true"
 
 :: 检查是否已hostname.sh存在44944启动命令
 ::先删除可能存在的旧命令（避免重复）
 adb shell "sed -i '/\/home\/root\/44944\/start\.sh/d' /etc/init.d/hostname.sh 2>/dev/null"
+adb shell "sed -i '/\/home\/root\/6677\/start\.sh/d' /etc/init.d/hostname.sh 2>/dev/null"
+adb shell "echo '' >> /etc/init.d/hostname.sh"
 adb shell "echo '# 44944服务 - 添加时间: $(date)' >> /etc/init.d/hostname.sh"
 adb shell "echo '/home/root/44944/start.sh &' >> /etc/init.d/hostname.sh"
 
